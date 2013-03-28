@@ -1,0 +1,28 @@
+
+On Ubuntu, the following dependencies are required:
+
+ghc
+libghc-ansi-terminal-dev
+
+To run the spartan test suite:
+
+make
+./Testing
+
+To see a detailed output from running the analysis on factorial(5)
+using 5-CFA:
+
+make
+./Testing factorial
+
+To run your own programs through the abstract interpreter, you will
+need to build the AST by hand. Look in ExampleLanguage.hs for the
+continuation style passing syntax, and look in Testing.hs for examples
+of its use (e.g. factorial_example). The only annoying aspect is that
+a unique integer label must manually be provided by hand to each node
+of an AST you create.
+
+In ExampleLanguage.hs you will also find a direct-style syntax and
+a CPS transform, but the CPS transform is woefully incomplete and
+definitely incorrect.
+
